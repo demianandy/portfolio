@@ -1,0 +1,434 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+}
+
+::-webkit-scrollbar{
+    width: 4px;
+    height: 15px;
+    /* background: gray; */
+}
+
+::-webkit-scrollbar-thumb{
+    background: black;
+    border-radius: 3px;
+    width: 3px;
+    height: 3px;
+}
+
+.edit{
+    width: 100%;
+    min-height: 100px;
+    background: url('../img/page.jpg') no-repeat bottom;
+    background-size: 300%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.edit-top{
+    width: 90%;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.edit-top h4{
+    font-size: 40px;
+    font-family: 'duedate';
+    text-transform: uppercase;
+    letter-spacing: +3px;
+    cursor: default;
+}
+
+.fields{
+    width: 100%;
+    max-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.edit-right,
+.edit-left{
+    width: 48%;
+    min-height: 550px;
+    margin-bottom: 15px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    box-shadow: 1px -1px 4px 1px gray;
+    background: url('../img/paper.jpg') no-repeat bottom;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-right h5{
+    font-family: 'zepsuta';
+    text-transform: uppercase;
+    cursor: default;
+    font-weight: 700;
+    letter-spacing: +5px;
+    font-size: 25px;
+    text-align: center;
+    color: green;
+    margin-bottom: 20px;
+}
+
+.edit-left{
+    height: 550px;
+    background: none;
+    border: 1px solid gray;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.edit-left::-webkit-scrollbar{
+    width: 4px;
+    height: 80%;
+    background: transparent;
+    border-radius: 5px;
+}
+
+.edit-left::-webkit-scrollbar-thumb{
+    background: black;
+    border-radius: 3px;
+    width: 3px;
+    height: 3px;
+}
+
+.edit-left .art{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    min-height: 50px;
+    border-bottom: 2px solid gray;
+
+    margin-right: 10px;
+}
+
+.edit-left .art h3{
+    font-family: 'zepsuta';
+    text-transform: uppercase;
+    cursor: default;
+    font-weight: 200;
+    letter-spacing: +1px;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.edit-left .art .buttons{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    align-self: center;
+    margin-bottom: 15px;
+}
+
+.edit-left .art .buttons a{
+    width: 150px;
+    padding: 10px 10px;
+    background: url('../img/string2.jpg') no-repeat bottom;
+    box-shadow: 0 3px 5px 2px gray;
+    outline: none;
+    font-family: 'zepsuta';
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    color: black;
+}
+
+.edit-left .art .buttons a.active{
+    box-shadow: none;
+    transition: all 0.2s;
+}
+
+.edit-right form{
+    width: 90%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-right form textarea{
+    resize: none;
+    width: 100%;
+    height: 50%;
+    outline: none;
+    padding: 16px;
+    background: url('../img/string.jpg') no-repeat center;
+    border: 1px solid gray;
+    font-family: 'zepsuta';
+    font-size: 16px;
+}
+
+.edit-right form input{
+    background: url('../img/string.jpg') no-repeat center;
+    border: 1px solid gray;
+    width: 100%;
+    height: 10%;
+    padding: 16px;
+    outline: none;
+    font-family: 'zepsuta';
+    font-size: 16px;
+}
+
+.edit-right form h3.invalid{
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.edit-right form input:focus,
+.edit-right form textarea:focus{
+    box-shadow: 0 3px 5px 5px gray;
+    transition: all 0.5s;
+}
+
+.edit-right form .buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.edit-right form a,
+.edit-right form .sohr,
+.main{
+    width: 45%;
+    height: 50px;
+    transition: all 0.2s;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 3px;
+    background: url('../img/string2.jpg') no-repeat center;
+    font-family: 'duedate';
+    color: black;
+    outline: none;
+    border: none;
+    box-shadow: 0 3px 5px 5px gray;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.main{
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    width: 250px;
+}
+
+.edit-right form a.active,
+.edit-right form .sohr.active,
+.main.active{
+    box-shadow: none;
+    transition: all 0.5s;
+}
+
+@media (max-width: 1300px){
+    .main{
+        width: 50px;
+        font-size: 0px;
+    }
+}
+@media (max-width: 1200px){
+    .fields .edit-left .art .buttons{
+        width: 80%;
+    }
+}
+
+@media (max-width: 1100px){
+    .fields .edit-left .art .buttons{
+        width: 100%;
+    }
+
+    .edit-right .buttons a,
+    .edit-right .buttons .sohr{
+        font-size: 10px;
+    }
+
+    .edit-top .begin{
+        font-size: 20px;
+        align-self: center;
+    }
+}
+
+@media (max-width: 800px){
+    .fields{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100vw;
+        align-items: center;
+    }
+
+    .fields .edit-left,
+    .fields .edit-right{
+        margin-bottom: 25px;
+        width: 95%;
+        min-height: 100px;
+        height: 60%;
+    }
+
+    .fields .edit-left{
+        height: 40%;
+    }
+
+    .edit-right .buttons a,
+    .edit-right .buttons .sohr{
+        margin-bottom: 15px;
+        padding: 12px 0 0 0;
+    }
+
+    .edit-right .buttons .sohr{
+        padding: 0 0 12px 0;
+    }
+
+    .fields .edit-left .art .buttons{
+        width: 60%;
+    }
+}
+
+@media (max-width: 700px){
+    .fields .edit-left .art .buttons{
+        width: 90%;
+    }
+}
+
+@media (max-width: 700px){
+    .fields .edit-left .art .buttons{
+        width: 100%;
+    }
+
+    .edit-top .begin{
+        font-size: 12px;
+    }
+
+    .edit{
+        background-size: 200%;
+        object-fit: none;
+    }
+
+    .fields .edit-left{
+        min-height: 200px;
+    }
+
+    .fields .edit-left .art{
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .fields .edit-left .art .buttons{
+        width: 100%;
+    }
+
+    .main{
+        top: 10px;
+    }
+}
+
+@media (max-width: 500px){
+    .fields .edit-left .art .buttons a,
+    .fields .edit-left .art .buttons .redactor{
+        font-size: 12px;
+    }
+
+    .fields .edit-right{
+        min-height: 400px;
+    }
+
+    .edit-left .art .buttons a{
+        width: 100px;
+        padding: 5px 0;
+    }
+
+    .edit{
+        background: url('../img/page.jpg') repeat-y bottom;
+        overflow-y: scroll;
+        object-fit: none;
+    }
+
+
+    .edit::-webkit-scrollbar{
+        width: 4px;
+        height: 15px;
+        background: gray;
+    }
+
+    .edit::-webkit-scrollbar-thumb{
+        background: black;
+        border-radius: 3px;
+        width: 3px;
+        height: 3px;
+    }
+
+    .edit-right form{
+        width: 90%;
+    }
+
+    .fields .edit-left .art h3{
+        font-size: 12px;
+    }
+
+    .edit-right form{
+        min-height: 300px;
+    }
+    
+    #edit.edit{
+        height: 100vh;
+        object-fit: none;
+        background-size: 200%;
+    }
+
+    .main{
+        top: 2px;
+        left: 2px;
+        height: 50px;
+        width: 50px;
+    }
+
+    .fields .edit-right .zaglavie{
+        font-size: 20px;
+    }
+
+    .fields .edit-right .buttons a{
+        height: 35px;
+    }
+
+    .fields .edit-right .buttons{
+        margin-bottom: 20px;
+    }
+
+    .fields .edit-right .buttons .sohr{
+        padding-top: 10px;
+        height: 35px;
+    }
+
+    .fields .edit-right{
+        justify-content: flex-start;
+    }
+
+    .fields .edit-right .zaglavie{
+        font-size: 12px;
+    }
+}

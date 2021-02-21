@@ -1,0 +1,410 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.footer-top{
+    width: 90%;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.footer-top h4{
+    font-size: 40px;
+    font-family: 'duedate';
+    text-transform: uppercase;
+    letter-spacing: +3px;
+    cursor: default;
+}
+
+.footer .footer-content{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-content .information{
+    width: 50%;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+}
+
+.footer-content .back{
+    width: 50%;
+    height: 90%;
+    white-space: nowrap;
+    margin-bottom: 15px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    box-shadow: 1px -1px 4px 1px gray;
+    background: url('../img/paper.jpg') no-repeat bottom;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content .information{
+    width: 50%;
+    height: 90%;
+    margin-bottom: 15px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-content .information h3{
+    text-align: center;
+    font-family: 'zepsuta';
+    text-transform: uppercase;
+    letter-spacing: +5px;
+    cursor: default;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.footer-content .information ul{
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 100;
+    font-size: 18px;
+    cursor: default;
+    font-family: 'zepsuta';
+    text-transform: lowercase;
+    border-bottom: 2px solid gray;
+    padding-bottom: 10px;
+}
+
+.footer-content .information ul br{
+    display: none;
+}
+
+.footer-content .information li{
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.footer-content .information li a{
+    color: black;
+    padding: 0 5px;
+}
+
+.footer-content .information li i{
+    width: 40px;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.footer-content .information p{
+    text-align: justify;
+    font-weight: 100;
+    font-size: 18px;
+    cursor: default;
+    font-family: 'zepsuta';
+    letter-spacing: 0px;
+    cursor: default;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.footer-content .back form{
+    width: 90%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content .back form textarea{
+    resize: none;
+    width: 100%;
+    height: 50%;
+    outline: none;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 16px;
+    background: url('../img/string.jpg') no-repeat center;
+    border: 1px solid gray;
+    font-family: 'zepsuta';
+    font-size: 16px;
+}
+
+.footer-content .back form input{
+    background: url('../img/string.jpg') no-repeat center;
+    border: 1px solid gray;
+    width: 100%;
+    height: 10%;
+    padding: 16px;
+    outline: none;
+    font-family: 'zepsuta';
+    font-size: 16px;
+}
+
+.footer-content .back form h3{
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    cursor: default;
+    color: red;
+    font-family: 'zepsuta';
+    margin-top: -20px;
+    letter-spacing: +2.8px;
+    opacity: 0;
+}
+
+.footer-content .back form h3.invalid{
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.back input:focus,
+.back .call:focus{
+    box-shadow: 0 3px 5px 5px gray;
+    transition: all 0.5s;
+}
+
+.footer-content .back form .go{
+    width: 70%;
+    transition: all 0.2s;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 3px;
+    padding: 10px 3px 35px 3px;
+    background: url('../img/string2.jpg') no-repeat center;
+    font-family: 'duedate';
+    color: black;
+    outline: none;
+    border: none;
+    box-shadow: 0 3px 5px 5px gray;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: -15px;
+}
+
+.footer-content .back form .go.active{
+    box-shadow: none;
+    transition: all 0.5s;
+}
+/* ======================== ПОДВАЛ ========================== */
+.footer .footer-bottom{
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid gray;
+    background: url('../img/paper.jpg') no-repeat bottom;
+}
+
+.footer .footer-bottom .info,
+.footer .footer-bottom .left,
+.footer .footer-bottom .right{
+    width: 28%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer .footer-bottom .info{
+    width: 44%;
+}
+
+.footer .footer-bottom .right,
+.footer .footer-bottom .left{
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.footer .footer-bottom .right{
+    align-items: flex-end;
+}
+
+.info h3,
+.left h3,
+.right h3{
+    font-family: 'zepsuta';
+    letter-spacing: +2px;
+    font-size: 16px;
+    cursor: default;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.right h3{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 100;   
+    letter-spacing: +1px;
+}
+
+.info h4{
+    font-family: 'zepsuta';
+    letter-spacing: +2px;
+    font-size: 16px;
+    cursor: default;
+    margin-bottom: -10px;
+}
+
+
+.info h5{
+    font-family: 'zepsuta';
+    letter-spacing: -1px;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: default;
+}
+
+.left h3{
+    text-transform: lowercase;
+    font-size: 16px;
+    font-weight: 100;   
+    letter-spacing: +1px;
+}
+
+.left span{
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: +1px;
+    font-size: 14px;
+}
+
+h3 a{
+    padding: 0;
+    margin: 0;
+    color: black;
+    cursor: pointer;
+}
+
+@media (max-width: 1300px){
+    .footer-content .information ul br{
+        display: block;
+    }
+
+    .footer-content .information p{
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 1100px){
+    .footer-top h4{
+        font-size: 30px;
+    }
+} 
+
+@media (max-width: 1000px){
+    .right h3{
+        display: none;
+    }
+}
+
+@media (max-width: 700px){
+    .footer .footer-bottom .info{
+        width: 100%;
+    }
+
+    .footer .footer-bottom .left,
+    .footer .footer-bottom .right{
+        width: 0%;
+    }
+
+    .footer-content .information,
+    .footer-content .back{
+        width: 100%;
+    }
+
+    .footer-content .information{
+        height: 300px;
+        flex-wrap: wrap;
+    }
+
+    .footer-content .information h3{
+        display: none;
+    }
+    .footer-content .information ul{
+        border: none;
+        width: 49%;
+        height: 250px;
+    }
+
+    .footer-content .information p{
+        width: 49%;
+        height: 25%;
+        margin-bottom: 10px;
+    }
+
+    .footer-content{
+        flex-direction: column;
+    }
+
+    .footer{
+        min-width: 100vw;
+    }
+     
+    .footer-top h4{
+        font-size: 30px;
+        letter-spacing: 0px;
+    }
+}
+
+@media (max-width: 600px){
+
+    .footer-content .information p{
+        font-size: 15px;
+        margin-top: +5px;
+    }
+
+    .footer-top h4{
+        font-size: 20px;
+    }
+
+    .footer-content .information ul{
+        width: 100%;
+        justify-self: center;
+    }
+}
+
+@media (max-width: 600px){
+    .information{
+        width: 100%;
+        height: 100px;
+        justify-content: center;
+    }
+    .information p{
+        display: none;
+    }
+
+    .information ul li br{
+        display: block;
+    }
+
+    .footer-top{
+        padding: 0px;
+        align-items: center;
+    }
+
+    .information .toptop{
+        padding-bottom: 85px;
+        line-height: 20px;
+    }
+
+}

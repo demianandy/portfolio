@@ -1,0 +1,161 @@
+.portfolio{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.portfolio-top{
+    width: 90%;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.portfolio-top h4{
+    font-size: 40px;
+    font-family: 'duedate';
+    text-transform: uppercase;
+    letter-spacing: +3px;
+    cursor: default;
+}
+
+.portfel{
+    width: 90%;
+    height: 100%;
+    white-space:nowrap;
+    overflow-x: scroll;
+    /* overflow: hidden; */
+    margin-bottom: 15px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    box-shadow: 1px -1px 4px 1px gray;
+    background: url('../img/paper.jpg') no-repeat bottom;
+    padding: 15px;
+    display: flex;
+}
+
+.portfel::-webkit-scrollbar{
+    width: 4px;
+    height: 15px;
+    background: url('../img/paper.jpg') no-repeat bottom;
+    border-radius: 50%;
+}
+
+.portfel::-webkit-scrollbar-thumb{
+    background: gray;
+    border-radius: 3px;
+    width: 3px;
+    height: 3px;
+}
+
+.portfel .item{
+    min-width: 49.5%;
+    height: 100%;
+    margin-right: 10px;
+    vertical-align: top;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    white-space: pre-wrap;
+}
+
+.portfel .item:last-child{
+    margin-right: 0;
+}
+
+.portfel .item .root.active{
+    box-shadow: none;
+    transition: all 0.2s;
+    cursor: default;
+}
+
+.portfel .item .zagolovok{
+    width: 90%;
+    height: 15%;
+    display: flex;
+    /* background: red; */
+    align-items: flex-start;
+}
+
+.portfel .item h3{
+    width: 100%;
+    /* background: green; */
+    margin-top: 10px;
+    cursor: default;
+    font-size: 14px;
+    font-family: 'duedate';
+    text-transform: uppercase;
+    letter-spacing: +3px;
+    display: flex;
+    text-align: center;
+    justify-self: center;
+}
+
+.portfel .item .paragrapf{
+    width: 90%;
+    height: 70%;
+    /* background: green; */
+    display: flex;
+    font-size: 18px;
+    font-family: 'zepsuta';
+    cursor: default;
+    /* font-style: italic; */
+    text-align: justify;
+    letter-spacing: -2px;
+    overflow-y: scroll;
+    padding-right: 10px;
+}
+
+.portfel .item a{
+    width: 65%;
+    transition: all 0.2s;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 3px;
+    padding: 15px 3px;
+    background: url('../img/string2.jpg') no-repeat center;
+    font-family: 'duedate';
+    color: black;
+    outline: none;
+    border: none;
+    box-shadow: 0 3px 5px 5px gray;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+@media (max-width: 1100px){
+    .portfolio-top h4{
+        font-size: 30px;
+    }
+} 
+
+@media (max-width: 700px){
+    .portfel .item{
+        min-width: 100%;
+    }
+
+    .portfolio{
+        min-width: 100vw;
+    }
+
+    
+    .portfolio-top h4{
+        font-size: 30px;
+        letter-spacing: 0px;
+    }
+}
+
+@media (max-width: 600px){
+    .portfolio-top h4{
+        font-size: 20px;
+    }
+
+    .portfolio-top{
+        padding: 0px;
+        align-items: center;
+    }
+}

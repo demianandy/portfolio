@@ -1,0 +1,626 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+::-webkit-scrollbar{
+    width: 4px;
+    height: 15px;
+    background: gray;
+}
+
+::-webkit-scrollbar-thumb{
+    background: black;
+    border-radius: 3px;
+    width: 3px;
+    height: 3px;
+}
+
+body{
+    background: gray;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.span{
+    display: none;
+}
+
+.left-list{
+    width: 20%;
+}
+
+.container{
+    width: 79.8%;
+    min-height: 100vh;
+    background: url('../img/page.jpg') no-repeat bottom;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    margin-bottom: 2px;
+    overflow: hidden;
+}
+
+.container .top{
+    display: flex;
+    width: 90%;
+    height: 200px;
+    border-bottom: 2px solid black;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .top .date{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .top .date h2,
+.container .top .date h4{
+    padding: 3px;
+    padding-bottom: 0;
+    font-size: 12px;
+    font-family: 'duedate';
+    text-align: right;
+    text-transform: lowercase;
+    letter-spacing: +1px;
+    cursor: default;
+    border-radius: 3px;
+    padding: 5px;
+    /* background: red; */
+}
+
+.container .top .date h4{
+    background: transparent;
+    color: black;
+}
+
+.container .top .date h4 a{
+    color: black;
+    padding: 5px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.container .top .date h4 a:hover{
+    background: red;
+    transition: all 0.5s;
+}
+
+.container .top .name{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.container .top .name h4,
+.container .top .name h5{
+    font-size: 13px;
+    font-family: 'duedate';
+    text-align: center;
+    text-transform: lowercase;
+    letter-spacing: +18px;
+    cursor: default;
+}
+
+.container .top .name span{
+    font-size: 55px;
+    font-family: 'duedate';
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    cursor: default;
+}
+
+.container .top .name h5{
+    letter-spacing: +11px;
+}
+
+.container .top .dat{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.container .top .dat h3{
+    margin-left: 5px;
+    padding-bottom: 0;
+    font-size: 12px;
+    font-family: 'duedate';
+    text-align: right;
+    text-transform: lowercase;
+    letter-spacing: 0px;
+    cursor: default;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+/* ======================= CONTETNT ===================== */
+
+.content{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+.content-1,
+.content-2{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.portrait{
+    width: 180px;
+    height: 180px;
+    background: grey;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 3px 3px 5px 5px gray;
+    overflow: hidden;
+}
+
+.portrait img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    left: 10px;
+    cursor: default;
+}
+
+.content-2 .portrait{
+    box-shadow: -3px 3px 5px 5px gray;
+}
+
+.content .text{
+    width: 70%;
+    text-align: justify;
+}
+
+.content span{
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+.content .text{
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-family: 'zepsuta';
+    letter-spacing: + 1px;
+    cursor: default;
+    cursor: default;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+/* ===================== POLOTNO ========================= */
+
+.polotno{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    background-color: gray;
+    background: url('../img/paper.jpg') no-repeat bottom;
+    box-shadow: 0 3px 5px 5px gray;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+    top: 0;
+    left: -1000px;
+    transition: 1s;
+    z-index: 5;
+}
+
+.polotno h1{
+    font-size: 16px;
+    font-family: 'duedate';
+    text-transform: uppercase;
+    letter-spacing: +1px;
+    cursor: default;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.polotno form{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.polotno form input{
+    width: 70%;
+    border: 3px solid black;
+    box-shadow: none;
+    font-size: 18px;
+    border-radius: 3px;
+    padding: 3px;
+    background: url('../img/string.jpg') no-repeat center;
+    font-family: 'zepsuta';
+    color: black;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 1px 1px gray;
+}
+
+.polotno form input:first-child{
+    margin-bottom: 10px;
+}
+
+.polotno form input:focus{
+    box-shadow: 0 3px 5px 5px gray;
+    transition: all 0.5s;
+}
+
+.polotno form .buttons{
+    margin-top: 10px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.polotno form input[type="submit"]{
+    width: 45%;
+    box-shadow: 0 3px 5px 5px gray;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.polotno form input[type="submit"].active{
+    box-shadow: none;
+    transition: all 0.2s;
+}
+
+.polotno.active{
+    transition: 1s;
+    top: 0;
+    left: -30px;
+}
+
+.error{
+    color: red;
+    font-family: 'zepsuta';
+    letter-spacing: -0.3px;
+    font-size: 16px;
+    font-weight: 700;
+    opacity: 0;
+    cursor: default;
+}
+
+.error.invalid{
+    opacity: 1;
+    transition: all 0.2s;
+}
+
+/* =============================== MEDIA =============================== */
+
+@media (max-width: 1300px){
+    .container .top .name span{
+        font-size: 45px;
+    }
+
+    .container{
+        min-height: 100px;
+    }
+    .content{
+        min-height: 100px;
+    }
+} 
+
+@media (max-width: 1100px){
+    .container .top .name span{
+        font-size: 35px;
+        padding: 15px 0;
+    }
+
+    .container .top .name h4,
+    .container .top .name h5{
+        letter-spacing: +10px;
+    }
+
+    .container .top .name h5{
+        letter-spacing: +5px;
+    }
+
+    .content-2 p,
+    .content-1 p{
+        line-height: 30px;
+    }
+} 
+
+@media (max-width: 1020px){
+    .left-list{
+        min-width: 202px;
+    }
+    .container{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1000px){
+    .content-1 p{
+        margin-left: 20px;
+    }
+    .content-2 p{
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 900px){
+    .left-list{
+        display: none;
+    }
+
+    .span{
+        display: block;
+        position: fixed;
+        top: 63px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        box-shadow: 0 3px 5px 5px gray;
+        background: url('../img/string2.jpg') no-repeat center;
+        z-index: 2;
+        cursor: pointer;
+        font-size: 0px;
+        border-radius: 3px;
+        font-weight: 700;
+        font-family: 'zepsuta';
+        color: black;
+        outline: none;
+        border: none;
+        text-align: center;
+        padding: 8px;
+        transition: all 0.6s;
+    }
+
+    .span.active{
+        box-shadow: none;
+        transition: all 0.2s;
+    }
+
+    .span.active2{
+        width: 100px;
+        left: 100px;
+        transition: all 0.6s;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 900px){
+    .content{
+        min-height: 550px;
+        justify-content: space-between;
+        margin-bottom: 0;
+    }
+    
+}
+
+@media (max-width: 800px){
+    .content{
+        height: 600px;
+        justify-content: space-between;
+        margin-bottom: 0;
+    }
+
+
+    .container .top .name span{
+        padding: 15px 0;
+    }
+
+    .content-1,
+    .content-2{
+        margin-bottom: 15px;
+    }
+    
+}
+
+@media (max-width: 700px){
+
+    .header{
+        min-width: 100vw;
+    }
+    .about{
+        min-width: 100vw;
+    }
+    .portfolio{
+        min-width: 100vw;
+    }
+    .uslugi{
+        min-width: 100vw;
+    }
+    .rewievs{
+        min-width: 100vw;
+    }
+    .footer{
+        min-width: 100vw;
+    }
+
+    .content{
+        width: 85%;
+        height: 90%;
+        padding-top: 20px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .content-1{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .content .portrait2{
+        display: none;
+    }
+
+    .content .portrait{
+        margin-bottom: 20px;
+    }
+
+    .content .text{
+        width: 100%;
+        margin: 0;
+        line-height: 22px;
+    }
+
+    .content .text span{
+        justify-self: center;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 700;
+        padding-left: 25%;
+    }
+
+    .container{
+        background-size: 300%;
+    }
+}
+
+@media (max-width: 632px){
+    .container .top .name span{
+        font-size: 30px;
+    }
+    .container .top .name h4,
+    .container .top .name h5{
+        font-weight: 100;
+        font-size: 12px;
+    }
+  
+
+    .container .top .name h4,
+    .container .top .name h5{
+        letter-spacing: +7px;
+    }
+
+    .container .top .name h5{
+        letter-spacing: +2.7px;
+    }
+}
+
+/* @media (max-height: 620px) {
+    .span{
+        top: 30px;
+    }
+}
+
+@media (max-height: 560px) {
+    .span{
+        top: 420px;
+    }
+}
+
+@media (max-height: 500px) {
+    .span{
+        top: 380px;
+    }
+}
+
+@media (max-height: 450px) {
+    .span{
+        top: 350px;
+    }
+}
+
+@media (max-height: 407px) {
+    .span{
+        top: 320px;
+    }
+} */
+
+@media (max-width: 550px){
+    .content-2 .text span{
+        padding-left: 0;
+        margin-left: 18%;
+    }
+}
+
+@media (max-width: 550px){
+    .content-2 .text span{
+        padding-left: 0;
+        margin-left: 15%;
+    }
+
+    .admin,
+    .container .top .dat h3,
+    .container .top .date h2{
+        letter-spacing: -1px;
+        font-weight: 100;
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 550px){
+    .span.active2{
+        left: 45px;
+    }
+}
+
+@media (max-width: 500px){
+    .content-2 .text span{
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .polotno{
+        z-index: 4;
+        background-color: gray;
+        /* background: url('../img/paper.jpg') no-repeat bottom; */
+    }
+}
+
+@media (max-width: 389px){
+    .admin,
+    .container .top .dat h3,
+    .container .top .date h2{
+        letter-spacing: -2px;
+        font-weight: 100;
+        font-size: 7px;
+    }
+}
+
+@media (max-width: 389px){
+    content .text span{
+        text-align: center;
+    }
+}
